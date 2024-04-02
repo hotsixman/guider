@@ -3,6 +3,8 @@
     import { onMount, setContext } from "svelte";
     import { browser } from "$app/environment";
     import Header from "$lib/components/layout/Header.svelte";
+    import light from 'highlight.js/styles/github.min.css?inline';
+    import dark from 'highlight.js/styles/github-dark.min.css?inline';
 
     const theme = writable<"light"|"dark">("light");
     const toggle = () =>{
@@ -37,6 +39,7 @@
             color:black;
         }
     </style>
+    {@html `<style>${light}</style>`}
     {:else}
     <style>
         body{
@@ -44,6 +47,7 @@
             color:white;
         }
     </style>
+    {@html `<style>${dark}</style>`}
     {/if}
 </svelte:head>
 
