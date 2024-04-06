@@ -34,6 +34,9 @@
 
         border-radius: 50vh;
         box-sizing: border-box;
+
+        cursor: pointer;
+        user-select: none;
     }
 
     .container-dark {

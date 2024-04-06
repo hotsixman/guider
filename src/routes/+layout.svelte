@@ -36,7 +36,6 @@
     <style>
         body{
             background-color:white;
-            color:black;
         }
     </style>
     {@html `<style>${light}</style>`}
@@ -44,7 +43,6 @@
     <style>
         body{
             background-color:#1a1918;
-            color:white;
         }
     </style>
     {@html `<style>${dark}</style>`}

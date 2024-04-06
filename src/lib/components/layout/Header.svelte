@@ -24,6 +24,8 @@
         justify-content: space-between;
 
         padding-inline: 10px;
+
+        margin-bottom: 2px;
     }
 
     header.dark{
