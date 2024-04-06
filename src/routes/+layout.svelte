@@ -34,12 +34,14 @@
     <style>
         body{
             background-color:white;
+            color:black;
         }
     </style>
     {:else}
     <style>
         body{
             background-color:#1a1918;
+            color:white;
         }
     </style>
     {/if}
