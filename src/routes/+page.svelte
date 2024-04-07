@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Introduce from "$lib/components/pages/Introduce.svelte";
+    import Banner from "$lib/components/pages/Banner.svelte";
 </script>
 
-<Introduce/>
+<Banner/>
