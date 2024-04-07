@@ -4,6 +4,7 @@
     import { browser } from "$app/environment";
     import Header from "$lib/components/layout/Header.svelte";
 
+    //theme
     const theme = writable<"light"|"dark">("light");
     const toggle = () =>{
         if($theme === "light"){
@@ -20,7 +21,6 @@
         }
     }
     setContext('theme', {value:theme, toggle});
-
     onMount(() => {
         if(browser){
             theme.set(window.localStorage.theme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches? "dark" : "light"))

@@ -3,7 +3,7 @@
     import type { Writable } from "svelte/store";
     import ThemeToggler from "./ThemeToggler.svelte";
 
-    const {value:theme, toggle}:{value:Writable<"light"|"dark">, toggle:() => void} = getContext('theme')
+    const {value:theme}:{value:Writable<"light"|"dark">} = getContext('theme')
 </script>
 
 <header class={$theme === "light"? "light" : "dark"}>

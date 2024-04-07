@@ -1,5 +1,7 @@
 <script lang="ts">
-    import Banner from "$lib/components/pages/Banner.svelte";
+    import MainBanner from "$lib/components/pages/MainBanner.svelte";
+    import FrameworkIntroducingBanner from "$lib/components/pages/FrameworkIntroducingBanner.svelte";
 </script>
 
-<Banner/>
+<MainBanner/>
+<FrameworkIntroducingBanner/>
