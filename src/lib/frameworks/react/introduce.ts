@@ -24,7 +24,8 @@ const reactIntroduce:FrameworkIntroduce = {
     }
     `,
     language: "javascript",
-    highlight: jsx
+    highlight: jsx,
+    bgColor: "black"
 }
 
 Object.freeze(reactIntroduce)

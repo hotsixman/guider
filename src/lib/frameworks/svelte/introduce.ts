@@ -1,18 +1,5 @@
 import svelteLogo from '$lib/assets/img/frameworks/svelte.svg'
 import type { FrameworkIntroduce } from '$lib/types/frameworks'
-import svelteLoader from 'highlightjs-svelte'
-
-let svelte:any;
-const f = {
-    registerLanguage(a:string, b:any){
-        svelte = {
-            name:'svelte',
-            register:b
-        };
-    }
-}
-
-svelteLoader(f)
 
 const svelteIntroduce:FrameworkIntroduce = {
     name:"svelte",
@@ -28,7 +15,8 @@ const svelteIntroduce:FrameworkIntroduce = {
     </button>
     `,
     language: "javascript",
-    highlight: svelte
+    highlight: "svelte",
+    bgColor: "#2e2e2e"
 }
 
 Object.freeze(svelteIntroduce)

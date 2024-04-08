@@ -6,5 +6,6 @@ export interface FrameworkIntroduce{
     description: string;
     exampleCode: string;
     language: string;
-    highlight: LanguageType<string>
+    bgColor: string;
+    highlight: LanguageType<string> | "svelte"
 }
