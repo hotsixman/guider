@@ -5,7 +5,7 @@ import jsx from 'svelte-highlight/languages/javascript'
 const reactIntroduce:FrameworkIntroduce = {
     name:"react",
     logo: reactLogo,
-    description: "전세계적으로 많이 사용하는 컴포넌트 기반 SPA 라이브러리입니다.",
+    description: "전세계적으로 많이 사용하는 컴포넌트 기반 SPA 프레임워크입니다.",
     exampleCode: /*jsx*/`
     import React, { useState } from "react";
 

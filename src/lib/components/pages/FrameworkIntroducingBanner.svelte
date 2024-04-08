@@ -7,17 +7,18 @@
     import { Highlight, HighlightSvelte } from "svelte-highlight";
     import dark from "svelte-highlight/styles/github-dark";
     import light from "svelte-highlight/styles/github";
-    import ContrastColor from "contrast-color";
+    import vueIntroduce from "$lib/frameworks/vue/introduce";
 
     //theme
     const { value: theme }: { value: Writable<"light" | "dark"> } =
         getContext("theme");
 
     //frameworks
-    const frameworks: Record<string, FrameworkIntroduce> = {
-        svelte: svelteIntroduce,
-        react: reactIntroduce,
-    };
+    const frameworks: FrameworkIntroduce[] = [
+        svelteIntroduce,
+        reactIntroduce,
+        vueIntroduce
+    ]
     let selectedFramework: FrameworkIntroduce | null = null;
     function selectThisFramework(framework: FrameworkIntroduce) {
         if (selectedFramework?.name === framework.name) {
@@ -38,7 +39,7 @@
 
 <div class="container">
     <div class="framework-selector">
-        {#each Object.values(frameworks) as framework}
+        {#each frameworks as framework}
             <img
                 class="framework-logo"
                 class:framework-logo-selected={framework.name ===
@@ -66,7 +67,7 @@
                 </a>
             </div>
             {#if selectedFramework.highlight === "svelte"}
-                <HighlightSvelte code={selectedFramework.exampleCode} />
+                <HighlightSvelte code={selectedFramework.exampleCode}/>
             {:else}
                 <Highlight
                     code={selectedFramework.exampleCode}
@@ -106,6 +107,12 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+
+        margin-top:10px;
+
+        padding-inline-end: 15px;
+
+        box-sizing: border-box;
     }
 
     .link {

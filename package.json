@@ -32,6 +32,7 @@
 		"contrast-color": "^1.0.1",
 		"highlight.js": "^11.9.0",
 		"highlightjs-svelte": "^1.0.6",
+		"highlightjs-vue": "^1.0.0",
 		"lit": "^3.1.2",
 		"prismjs": "^1.29.0",
 		"svelte-highlight": "^7.6.0"
