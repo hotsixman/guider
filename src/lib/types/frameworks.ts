@@ -9,3 +9,10 @@ export interface FrameworkIntroduce{
     bgColor: string;
     highlight: LanguageType<string> | "svelte"
 }
+
+export interface FrameworkItem{
+    name: string;
+    logo: string;
+    bannerImg: string;
+    description: string;
+}

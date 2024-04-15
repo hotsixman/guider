@@ -33,7 +33,7 @@
     {#if $theme === "light"}
     <style>
         body{
-            background-color:rgb(245, 243, 239);
+            background-color:#f5f2e9;
             color:black;
         }
     </style>
