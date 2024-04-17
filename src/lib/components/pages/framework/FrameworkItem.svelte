@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
     import { getContext } from "svelte";
     import { type Writable } from "svelte/store";
 
@@ -9,7 +10,7 @@
     const { value: theme } = getContext("theme") as { value: Writable<"light" | "dark"> };
 </script>
 
-<div class="container">
+<a class="container" href={`/framework/${name.toLowerCase()}`}>
     <div class="banner" style={`background-image: url('${bannerImg}');`}/>
     <div class={`intro ${$theme === "light"? "intro-light" : "intro-dark"}`}>
         <div class="name">
@@ -19,7 +20,7 @@
             {description}
         </div>
     </div>
-</div>
+</a>
 
 <style>
     .container{
@@ -31,6 +32,9 @@
         border-radius: 10px;
 
         cursor:pointer;
+
+        color:inherit;
+        text-decoration: none;
     }
 
     .banner{

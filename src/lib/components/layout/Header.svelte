@@ -2,13 +2,16 @@
     import { getContext } from "svelte";
     import type { Writable } from "svelte/store";
     import ThemeToggler from "./ThemeToggler.svelte";
+    import HeaderLink from "./HeaderLink.svelte";
 
     const {value:theme}:{value:Writable<"light"|"dark">} = getContext('theme')
 </script>
 
 <header class={$theme === "light"? "light" : "dark"}>
     <div class="left">
-
+        <HeaderLink href="/framework">
+            Frameworks
+        </HeaderLink>
     </div>
     <div class="right">
         <ThemeToggler/>
