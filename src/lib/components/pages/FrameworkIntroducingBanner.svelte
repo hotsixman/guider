@@ -1,24 +1,14 @@
 <script lang="ts">
     import type { FrameworkIntroduce } from "$lib/types/frameworks";
-    import svelteIntroduce from "$lib/frameworks/svelte/introduce";
-    import reactIntroduce from "$lib/frameworks/react/introduce";
     import { getContext } from "svelte";
     import { type Writable } from "svelte/store";
     import { Highlight, HighlightSvelte } from "svelte-highlight";
-    import dark from "svelte-highlight/styles/github-dark";
-    import light from "svelte-highlight/styles/github";
-    import vueIntroduce from "$lib/frameworks/vue/introduce";
+    import { frameworkIntroduces } from "$lib/frameworks/frameworks";
 
     //theme
-    const { value: theme }: { value: Writable<"light" | "dark"> } =
-        getContext("theme");
+    const theme = getContext("theme") as Writable<"light"|"dark">
 
     //frameworks
-    const frameworks: FrameworkIntroduce[] = [
-        svelteIntroduce,
-        reactIntroduce,
-        vueIntroduce
-    ]
     let selectedFramework: FrameworkIntroduce | null = null;
     function selectThisFramework(framework: FrameworkIntroduce) {
         if (selectedFramework?.name === framework.name) {
@@ -29,17 +19,9 @@
     }
 </script>
 
-<svelte:head>
-    {#if $theme === "light"}
-        {@html light}
-    {:else}
-        {@html dark}
-    {/if}
-</svelte:head>
-
 <div class="container">
     <div class="framework-selector">
-        {#each frameworks as framework}
+        {#each frameworkIntroduces as framework}
             <img
                 class="framework-logo"
                 class:framework-logo-selected={framework.name ===
@@ -136,7 +118,7 @@
     }
 
     .link-light{
-        background-color: white;
+        background-color: #edf5f5;
     }
 
     .link img {

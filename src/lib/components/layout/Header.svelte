@@ -4,7 +4,7 @@
     import ThemeToggler from "./ThemeToggler.svelte";
     import HeaderLink from "./HeaderLink.svelte";
 
-    const {value:theme}:{value:Writable<"light"|"dark">} = getContext('theme')
+    const theme = getContext('theme') as Writable<"light"|"dark">
 </script>
 
 <header class={$theme === "light"? "light" : "dark"}>
@@ -27,8 +27,6 @@
         justify-content: space-between;
 
         padding-inline: 10px;
-
-        margin-bottom: 2px;
     }
 
     header.dark{
@@ -39,7 +37,7 @@
     }
 
     header.light{
-        background-color: white;
+        background-color: #edf5f5;
         color:black;
 
         box-shadow: 0px 0px 2px black;

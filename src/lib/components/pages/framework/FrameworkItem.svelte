@@ -7,7 +7,7 @@
     export let bannerImg: string;
     export let description: string;
 
-    const { value: theme } = getContext("theme") as { value: Writable<"light" | "dark"> };
+    const theme = getContext("theme") as Writable<"light"|"dark">
 </script>
 
 <a class="container" href={`/framework/${name.toLowerCase()}`}>

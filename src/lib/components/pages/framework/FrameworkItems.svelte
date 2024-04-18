@@ -1,18 +1,10 @@
 <script lang="ts">
     import FrameworkItem from "$lib/components/pages/framework/FrameworkItem.svelte";
-    import svelteItem from "$lib/frameworks/svelte/item";
-    import reactItem from "$lib/frameworks/react/item";
-    import vueItem from "$lib/frameworks/vue/item";
-
-    const frameworks = [
-        reactItem,
-        svelteItem,
-        vueItem,
-    ];
+    import { frameworkItems } from "$lib/frameworks/frameworks";
 </script>
 
 <div class="item-container">
-    {#each frameworks as framework}
+    {#each frameworkItems as framework}
         <FrameworkItem
             name={framework.name}
             description={framework.description}

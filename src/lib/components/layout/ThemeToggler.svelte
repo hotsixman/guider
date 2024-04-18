@@ -4,11 +4,8 @@
     import light from "../../assets/img/light.svg";
     import dark from "../../assets/img/dark.svg";
 
-    const {
-        value: theme,
-        toggle,
-    }: { value: Writable<"light" | "dark">; toggle: () => void } =
-        getContext("theme");
+    const theme = getContext('theme') as Writable<"light"|"dark">
+    const toggle = getContext('themeToggle') as () => void
 </script>
 
 <div

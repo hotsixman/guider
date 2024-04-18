@@ -1,5 +1,6 @@
 import svelteLogo from '$lib/assets/img/frameworks/svelte.svg'
 import type { FrameworkIntroduce } from '$lib/types/frameworks'
+import { xml } from 'svelte-highlight/languages'
 
 const svelteIntroduce:FrameworkIntroduce = {
     name:"svelte",
@@ -15,7 +16,7 @@ const svelteIntroduce:FrameworkIntroduce = {
     </button>
     `,
     language: "javascript",
-    highlight: "svelte",
+    highlight: xml,
     bgColor: "#2e2e2e"
 }
 
